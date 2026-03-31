@@ -7,15 +7,31 @@ A lightweight C++ logging wrapper built on [spdlog](https://github.com/gabime/sp
 - C++17 or later
 - CMake 3.16+
 
-### Examples 
+### Integration
+
+Add rune-logger to your project with CMake `FetchContent`:
+
+```cmake
+include(FetchContent)
+FetchContent_Declare(
+    rune_logger
+    GIT_REPOSITORY https://github.com/YuichiKamishiro/rune_logger.git
+    GIT_TAG main  # recommend pinning to a specific commit or tag
+)
+FetchContent_MakeAvailable(rune_logger)
+
+target_link_libraries(your_target PRIVATE rune_logger)
+```
+
+spdlog is fetched automatically as a transitive dependency.
+
+### Building the examples 
 
 ```bash
 mkdir build && cd build
 cmake ..
 make
 ```
-
-spdlog is fetched automatically via CMake `FetchContent`.
 
 ## Usage
 

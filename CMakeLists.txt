@@ -12,13 +12,19 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(spdlog)
 
-add_executable(rune-logger_example
-    example.cpp
+add_library(rune_logger INTERFACE)
+
+target_include_directories(rune_logger INTERFACE
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>
+    $<INSTALL_INTERFACE:include>
 )
 
-target_include_directories(rune-logger_example PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/inc
-    ${spdlog_SOURCE_DIR}/include
-)
+target_link_libraries(rune_logger INTERFACE spdlog::spdlog)
 
-target_link_libraries(rune-logger_example PRIVATE spdlog::spdlog)
+if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
+    add_executable(rune-logger_example
+        example.cpp
+    )
+
+    target_link_libraries(rune-logger_example PRIVATE rune_logger)
+endif()
