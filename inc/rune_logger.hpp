@@ -248,64 +248,64 @@ private:
 };
 
 // Theme definitions
-const theme theme::classic = {};
+inline const theme theme::classic = {};
 
-const theme theme::ocean = {.timestamp_color = color::bright_blue,
+inline const theme theme::ocean = {.timestamp_color = color::bright_blue,
                             .logger_color = color::bold_cyan,
                             .message_color = color::bright_white,
                             .bracket_color = color::cyan,
                             .level_colors = level_color_variant::classic};
 
-const theme theme::sunset = {.timestamp_color = color::bright_yellow,
+inline const theme theme::sunset = {.timestamp_color = color::bright_yellow,
                              .logger_color = color::bold_magenta,
                              .message_color = color::bright_white,
                              .bracket_color = color::bright_red,
                              .level_colors = level_color_variant::vivid};
 
-const theme theme::matrix = {.timestamp_color = color::green,
+inline const theme theme::matrix = {.timestamp_color = color::green,
                              .logger_color = color::bold_green,
                              .message_color = color::bright_green,
                              .bracket_color = color::green,
                              .level_colors = level_color_variant::monochrome};
 
-const theme theme::gray_theme = {.timestamp_color = color::bright_black,
+inline const theme theme::gray_theme = {.timestamp_color = color::bright_black,
                                  .logger_color = color::white,
                                  .message_color = color::bright_white,
                                  .bracket_color = color::bright_black,
                                  .level_colors =
                                      level_color_variant::monochrome};
 
-const theme theme::forest = {.timestamp_color = color::green,
+inline const theme theme::forest = {.timestamp_color = color::green,
                              .logger_color = color::bold_green,
                              .message_color = color::bright_white,
                              .bracket_color = color::dim_green,
                              .level_colors = level_color_variant::classic};
 
-const theme theme::desert = {.timestamp_color = color::yellow,
+inline const theme theme::desert = {.timestamp_color = color::yellow,
                              .logger_color = color::bold_yellow,
                              .message_color = color::bright_white,
                              .bracket_color = color::orange,
                              .level_colors = level_color_variant::vivid};
 
-const theme theme::night = {.timestamp_color = color::bright_black,
+inline const theme theme::night = {.timestamp_color = color::bright_black,
                             .logger_color = color::bright_blue,
                             .message_color = color::bright_white,
                             .bracket_color = color::dim_blue,
                             .level_colors = level_color_variant::monochrome};
 
-const theme theme::solarized = {.timestamp_color = color::bright_yellow,
+inline const theme theme::solarized = {.timestamp_color = color::bright_yellow,
                                 .logger_color = color::bright_blue,
                                 .message_color = color::bright_white,
                                 .bracket_color = color::bright_cyan,
                                 .level_colors = level_color_variant::classic};
 
-const theme theme::minimal = {.timestamp_color = color::gray,
+inline const theme theme::minimal = {.timestamp_color = color::gray,
                               .logger_color = color::white,
                               .message_color = nullptr,
                               .bracket_color = color::gray,
                               .level_colors = level_color_variant::monochrome};
 
-const theme theme::vibrant = {.timestamp_color = color::bright_magenta,
+inline const theme theme::vibrant = {.timestamp_color = color::bright_magenta,
                               .logger_color = color::bold_cyan,
                               .message_color = color::bright_white,
                               .bracket_color = color::bright_red,
